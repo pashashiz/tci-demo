@@ -1,0 +1,16 @@
+server:
+  port: ${PORT:8060}
+  context-path: /tcm-demo/
+
+eureka:
+  instance:
+    metadata-map:
+      instanceId: ${spring.application.name}:${random.value}
+      uri-prefix: tcm-demo
+  client:
+    serviceUrl:
+      defaultZone: http://127.0.0.1:8761/eureka/
+
+logging:
+  level:
+    com.netflix: DEBUG
