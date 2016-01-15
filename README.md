@@ -1,6 +1,9 @@
-### Demo of the microservice architecture for TCI
+## Demo of the microservice architecture for TCI
+
+### How to deploy
 
 There are three way to run microservices:
+
 1. Use executable jar (war) applications
 2. Use traditional deployment to application server
 3. Use docker containers
@@ -28,7 +31,7 @@ set JAVA_OPTS=-Dserver.port=8080 -Deureka.client.serviceUrl.defaultZone=http://l
 
 // TODO
 
-**** How to test
+### How to test
 
 To ask `dummy-tcm` service for document, just sent request to `gateway` service with `dummy-tcm` service name and URI, for example:
 ```
@@ -36,6 +39,7 @@ curl http://localhost:8080/gateway/dummy-tcm/document
 ```
 
 Useful links (in case `service-registry` is deployed at `http://localhost:8080`):
+
 - To check registered services go to `http://localhost:8080/service-registry`
 - To get services detail information go to `http://localhost:8080/service-registry/eureka/apps`
 
