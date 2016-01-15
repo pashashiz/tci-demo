@@ -35,3 +35,7 @@ To ask `dummy-tcm` service for document, just sent request to `gateway` service 
 curl http://localhost:8080/gateway/dummy-tcm/document
 ```
 
+Useful links (in case `service-registry` is deployed at `http://localhost:8080`):
+- To check registered services go to `http://localhost:8080/service-registry`
+- To get services detail information go to `http://localhost:8080/service-registry/eureka/apps`
+
