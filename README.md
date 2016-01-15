@@ -1,17 +1,17 @@
-*** Demo of the microservice architecture for TCI
+### Demo of the microservice architecture for TCI
 
 There are three way to run microservices:
 1. Use executable jar (war) applications
 2. Use traditional deployment to application server
 3. Use docker containers
 
-**** Using executable jar
+##### Using executable jar
 
 To run microcervices this way, just do `mvn clean package` and run each jar file.
 Each service has default port, and if we need to run the second node of the already running application on port `8080`
 we should pass command line argument with new port number: `--service.port=8081`
 
-**** Using traditional deployment
+##### Using traditional deployment
 
 To prepare war files just run `mvn clean package -P war`. After we can deploy that war file as usual.
 But there are two environment variables we need to specify for our application server:
@@ -24,7 +24,7 @@ Full example:
 set JAVA_OPTS=-Dserver.port=8080 -Deureka.client.serviceUrl.defaultZone=http://localhost:8080/service-registry/eureka/
 ```
 
-**** Using docker containers
+##### Using docker containers
 
 // TODO
 
