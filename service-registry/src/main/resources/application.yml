@@ -1,6 +1,8 @@
 spring:
   application:
     name: service-registry
+  jmx:
+    enabled: false
 
 server:
   port: ${PORT:8761}

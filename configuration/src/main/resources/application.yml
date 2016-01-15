@@ -1,6 +1,8 @@
 spring:
   application:
     name: configuration
+  jmx:
+    enabled: false
 
 server:
   port: ${PORT:8010}
@@ -8,11 +10,12 @@ server:
 
 eureka:
   instance:
+    lease-renewal-interval-in-seconds: 5
     metadata-map:
-      instance-id: ${spring.application.name}:${server.port}:${random.value}
+      instanceId: ${spring.application.name}:${server.port}:${random.value}
   client:
     service-url:
-      default-zone: http://localhost:8761/service-registry/eureka/
+      defaultZone: http://localhost:8761/service-registry/eureka/
 
 logging:
   level:
